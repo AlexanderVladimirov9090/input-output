@@ -7,43 +7,61 @@ import java.util.Scanner;
 /**
  * Created by clouway on 16.05.16.
  */
-public class ConsoleReader implements Reading {
 
-    public ConsoleReader(BufferedReader inStream) {
-        BufferedReader reader = new BufferedReader(inStream);
+/**
+ * Implements Reading interface
+ */
+public class ConsoleReader implements Reading {
+    private BufferedReader reader;
+
+    public ConsoleReader(InputStreamReader inStream) {
+        this.reader = new BufferedReader(inStream);
     }
 
+    /**
+     * Reads String type of input
+     *
+     * @return
+     */
     @Override
     public String readString() {
+        String inputString = "";
 
-       String inputString = "";
         try {
-          inputString = readLine();
+            inputString = readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return inputString;
-
     }
 
-
+    /**
+     * Reads char type of input
+     *
+     * @return
+     */
     @Override
     public char readChar() {
+        char c = 0;
 
         try {
-            String inputString = readLine();
+            char inputString = readLine().charAt(0);
+            c = inputString;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        char c = readChar();
-        return c;
-
-
+          return c;
     }
 
+    /**
+     * Reads int type of input
+     *
+     * @return
+     */
     @Override
     public int readInt() {
         String inputString = null;
+
         try {
             inputString = readLine();
         } catch (IOException e) {
@@ -51,13 +69,17 @@ public class ConsoleReader implements Reading {
         }
         int n = Integer.parseInt(inputString);
         return n;
-
     }
 
+    /**
+     * Reads float type of inpute
+     *
+     * @return
+     */
     @Override
     public float readFloat() {
-
         String inputString = null;
+
         try {
             inputString = readLine();
         } catch (IOException e) {
@@ -67,6 +89,12 @@ public class ConsoleReader implements Reading {
         return f;
     }
 
+    /**
+     * Reads String and throws IOException
+     *
+     * @return
+     * @throws IOException
+     */
     public String readLine() throws IOException {
         String inputLine = "";
 
@@ -76,9 +104,6 @@ public class ConsoleReader implements Reading {
             System.out.println(e);
             e.printStackTrace();
         }
-
         return inputLine;
     }
-
-    private BufferedReader reader;
 }
