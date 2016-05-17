@@ -1,5 +1,7 @@
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 
 /**
@@ -7,16 +9,18 @@ import java.io.InputStreamReader;
  */
 public class Demo {
     public static void main(String[] args) {
-        ConsoleReader reader1 = new ConsoleReader(new InputStreamReader(System.in));
+        ConsoleStream reader = new ConsoleStream(System.in);
 
         try {
-            System.out.println(reader1.readLine());
-            System.out.println(reader1.readInt());
-            System.out.println(reader1.readChar());
-            System.out.println(reader1.readFloat());
-            System.out.println(reader1.readString());
-        } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("OK");
+            System.out.println("Hello "+ reader.readInt());
+           /* System.out.println(reader.readChar());
+            System.out.println(reader.readFloat());
+            System.out.println(reader.readString());
+       */
+        } catch (Exception e) {
+            e.fillInStackTrace();
         }
     }
 }
+
