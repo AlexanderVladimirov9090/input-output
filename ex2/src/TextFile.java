@@ -6,12 +6,12 @@ import java.util.Scanner;
 /**
  * Created by clouway on 18.05.16.
  */
-public class CreatedFIle {
+public class TextFile {
     private File file;
     private String nameOfFile;
     private String endFileSymbol;
 
-    public CreatedFIle(String nameOfFile, String endFileSymbol) {
+    public TextFile(String nameOfFile, String endFileSymbol) {
 
         this.nameOfFile = nameOfFile;
         this.endFileSymbol = endFileSymbol;
@@ -32,10 +32,10 @@ public class CreatedFIle {
     /**
      * Reads content from console.
      *
-     * @param endFileSymbol symbol used by user to stop read from console.
+     * @param endFileSymbol symbol used by user to stop content from console.
      * @return content from console.
      */
-    private String read(String endFileSymbol) {
+    private String content(String endFileSymbol) {
         Scanner scanner = new Scanner(System.in);
         String content = "";
         boolean check = true;
@@ -53,12 +53,12 @@ public class CreatedFIle {
     }
 
     /**
-     * Write content form read() to file.
+     * Write content form content() to file.
      */
     private void write() {
 
         try (FileWriter writer = new FileWriter(nameOfFile)) {
-            writer.write(read(endFileSymbol));
+            writer.write(content(endFileSymbol));
         } catch (IOException e) {
             e.printStackTrace();
         }
