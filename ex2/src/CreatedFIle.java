@@ -27,18 +27,18 @@ public class CreatedFIle {
     }
 
     private String read(String endFileSymbol) {
-        Scanner sc = new Scanner(System.in);
-        String str = "";
+        Scanner scanner = new Scanner(System.in);
+        String content = "";
         boolean check = true;
         while (check) {
-            String buf = sc.nextLine();
-            if (buf.equals(endFileSymbol)) {
+            String buffer = scanner.nextLine();
+            if (buffer.equals(endFileSymbol)) {
                 check = false;
             } else {
-                str += buf + "\n";
+                content += buffer + "\n";
             }
         }
-        return str;
+        return content;
     }
 
     private void write() {
