@@ -4,9 +4,9 @@
 public class Demo {
     public static void main(String[] args) {
 
-        TextFile file = new TextFile("file", ".");
+        TextFile file = new TextFile("file");
         System.out.println("Enter content for file, then type . to finish:");
-        file.createFile();
+        file.createFile(".");
     }
 }
 

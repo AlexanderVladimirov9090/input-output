@@ -9,24 +9,24 @@ import java.util.Scanner;
 public class TextFile {
     private File file;
     private String nameOfFile;
-    private String endFileSymbol;
 
-    public TextFile(String nameOfFile, String endFileSymbol) {
+
+    public TextFile(String nameOfFile) {
 
         this.nameOfFile = nameOfFile;
-        this.endFileSymbol = endFileSymbol;
+
     }
 
     /**
      * Creating file and calling write() to write given content.
      */
-    public void createFile() {
+    public void createFile(String endFileSymbol) {
 
         if (file == null) {
             File directory = new File("/src");
             file = new File(directory, nameOfFile);
         }
-        write();
+        write(endFileSymbol);
     }
 
     /**
@@ -55,7 +55,7 @@ public class TextFile {
     /**
      * Write content form content() to file.
      */
-    private void write() {
+    private void write(String endFileSymbol) {
 
         try (FileWriter writer = new FileWriter(nameOfFile)) {
             writer.write(content(endFileSymbol));
