@@ -13,7 +13,7 @@ public class Demo {
 
          try {
              file.content();
-             wFile.copyContentFrom(file.content());
+             wFile.copyContentFrom( file);
          }catch (IOException e){
              e.printStackTrace();
          }

@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,19 +9,24 @@ import java.io.IOException;
 public class ExistedFile {
     private String fileName;
 
-    public ExistedFile(String fileName){
+    public ExistedFile(String fileName) {
         this.fileName = fileName;
     }
 
-    public int content() throws IOException {
-        FileReader inputStream = null;
+    public String content() throws IOException {
+        BufferedReader inputStream = null;
+
         try {
-            inputStream = new FileReader(fileName);
-            }
-        catch (Exception e){
+            inputStream = new BufferedReader(new FileReader(fileName));
+
+            return inputStream.readLine();
+        }catch (IOException e){
             e.printStackTrace();
         }
-         return inputStream.read();
-    }
+        finally {
+            inputStream.close();
+                    }
+        return "";
 
+    }
 }
