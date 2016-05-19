@@ -7,7 +7,6 @@ public class Demo {
         TextFile file = new TextFile("file");
         Console console = new Console();
         Writer writer = new Writer();
-        file.createFile();
 
         System.out.println("Enter contentTill for file, then type . to finish:");
         writer.write(console.contentTill("."), file);
