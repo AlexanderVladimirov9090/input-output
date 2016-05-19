@@ -5,8 +5,13 @@ public class Demo {
     public static void main(String[] args) {
 
         TextFile file = new TextFile("file");
-        System.out.println("Enter content for file, then type . to finish:");
-        file.createFile(".");
+        Console console = new Console();
+
+        System.out.println("Enter contentTill for file, then type . to finish:");
+        file.createFile();
+        Writer writer = new Writer();
+        writer.write(console.contentTill("."), file);
+
     }
 }
 

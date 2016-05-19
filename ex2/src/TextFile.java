@@ -18,26 +18,29 @@ public class TextFile {
     }
 
     /**
-     * Creating file and calling write() to write given content.
+     * Creating file and calling write() to write given contentTill.
      */
-    public void createFile(String endFileSymbol) {
+    public void createFile() {
 
         if (file == null) {
             File directory = new File("/src");
             file = new File(directory, nameOfFile);
         }
-        write(endFileSymbol);
     }
 
+    public String fileName(){
+        return nameOfFile;
+    }
+/*
     /**
-     * Reads content from console.
+     * Reads contentTill from console.
      *
-     * @param endFileSymbol symbol used by user to stop content from console.
-     * @return content from console.
+     * @param endFileSymbol symbol used by user to stop contentTill from console.
+     * @return contentTill from console.
      */
-    private String content(String endFileSymbol) {
+ /*   private String contentTill(String endFileSymbol) {
         Scanner scanner = new Scanner(System.in);
-        String content = "";
+        String contentTill = "";
         boolean check = true;
 
         while (check) {
@@ -46,21 +49,22 @@ public class TextFile {
             if (buffer.equals(endFileSymbol)) {
                 check = false;
             } else {
-                content += buffer + "\n";
+                contentTill += buffer + "\n";
             }
         }
-        return content;
-    }
-
+        return contentTill;
+    }*/
+/*
     /**
-     * Write content form content() to file.
+     * Write contentTill form contentTill() to file.
      */
-    private void write(String endFileSymbol) {
+  /*  private void write(String endFileSymbol) {
 
         try (FileWriter writer = new FileWriter(nameOfFile)) {
-            writer.write(content(endFileSymbol));
+            writer.write(contentTill(endFileSymbol));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    */
 }
