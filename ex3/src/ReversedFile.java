@@ -19,14 +19,15 @@ public class ReversedFile {
             String l;
 
             while ((l = inputStream.readLine()) != null)
-
                 outputStream.println(reverse(l));
         } catch (IIOException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+
             if (inputStream != null) {
+
                 try {
                     inputStream.close();
                 } catch (IOException e) {
@@ -40,14 +41,12 @@ public class ReversedFile {
     }
 
     private String reverse(String line) {
-
         String reversedString = "";
+
         for (int i = line.length(); i > 0; i--) {
             reversedString += line.charAt(i - 1);
         }
-
         return reversedString;
     }
-
 }
 
