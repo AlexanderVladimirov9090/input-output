@@ -6,15 +6,19 @@ import java.io.*;
  */
 public class ReversedFile {
 
-
-    public void contentFileToFile(String fileName, String newFile) {
+    /**
+     * Transfer reversed lines from file to file.
+     * @param sourceFile is the file from the reading is.
+     * @param destinationFile is the file where writing is.
+     */
+    public void contentFileToFile(String sourceFile, String destinationFile) {
 
         BufferedReader inputStream = null;
         PrintWriter outputStream = null;
 
         try {
-            inputStream = new BufferedReader(new FileReader(fileName));
-            outputStream = new PrintWriter(new FileWriter(newFile));
+            inputStream = new BufferedReader(new FileReader(sourceFile));
+            outputStream = new PrintWriter(new FileWriter(destinationFile));
 
             String l;
 
@@ -40,6 +44,11 @@ public class ReversedFile {
         }
     }
 
+    /**
+     * Reversing giver string.
+     * @param line line that is reversed
+     * @return reversed line.
+     */
     private String reverse(String line) {
         String reversedString = "";
 
