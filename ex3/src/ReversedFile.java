@@ -7,13 +7,13 @@ import java.io.*;
 public class ReversedFile {
 
 
-    public void contentFileToFile(String fileName, String newFile) {
+    public void contentFileToFile(String sourceFile, String newFile) {
 
         BufferedReader inputStream = null;
         PrintWriter outputStream = null;
 
         try {
-            inputStream = new BufferedReader(new FileReader(fileName));
+            inputStream = new BufferedReader(new FileReader(sourceFile));
             outputStream = new PrintWriter(new FileWriter(newFile));
 
             String l;
@@ -39,14 +39,5 @@ public class ReversedFile {
             }
         }
     }
-/*
-    private String reverse(String line) {
-        String reversedString = "";
-
-        for (int i = line.length(); i > 0; i--) {
-            reversedString += line.charAt(i - 1);
-        }
-        return reversedString;
-    }*/
 }
 
