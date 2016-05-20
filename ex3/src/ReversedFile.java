@@ -19,7 +19,7 @@ public class ReversedFile {
             String l;
 
             while ((l = inputStream.readLine()) != null)
-                outputStream.println(reverse(l));
+                outputStream.println(new StringBuffer(l).reverse());
         } catch (IIOException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -39,7 +39,7 @@ public class ReversedFile {
             }
         }
     }
-
+/*
     private String reverse(String line) {
         String reversedString = "";
 
@@ -47,6 +47,6 @@ public class ReversedFile {
             reversedString += line.charAt(i - 1);
         }
         return reversedString;
-    }
+    }*/
 }
 
