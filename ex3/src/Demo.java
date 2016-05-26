@@ -6,6 +6,6 @@ public class Demo {
 
     public static void main(String[] args) {
         ReversedFile reversed = new ReversedFile();
-        reversed.contentFileToFile("file", "newFile");
+        reversed.reversedContent("file", "newFile");
     }
 }

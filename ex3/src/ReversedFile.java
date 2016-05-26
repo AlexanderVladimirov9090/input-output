@@ -11,7 +11,7 @@ public class ReversedFile {
      * @param sourceFile is the file from the reading is.
      * @param destinationFile is the file where writing is.
      */
-    public void contentFileToFile(String sourceFile, String destinationFile) {
+    public void reversedContent(String sourceFile, String destinationFile) {
 
         BufferedReader inputStream = null;
         PrintWriter outputStream = null;
@@ -20,10 +20,10 @@ public class ReversedFile {
             inputStream = new BufferedReader(new FileReader(sourceFile));
             outputStream = new PrintWriter(new FileWriter(destinationFile));
 
-            String l;
+            String line;
 
-            while ((l = inputStream.readLine()) != null)
-                outputStream.println(reverse(l));
+            while ((line = inputStream.readLine()) != null)
+                outputStream.println(reverse(line));
         } catch (IIOException e) {
             e.printStackTrace();
         } catch (Exception e) {
