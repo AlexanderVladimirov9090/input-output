@@ -13,16 +13,16 @@ public class Content {
 
     /**
      * Transfer reversed lines from file to file.
-     * @param destinationFile is the file where writing is.
+     * @param target is the file where writing is.
      */
-    public void writeReversed(File destinationFile) {
+    public void writeReversed(File target) {
 
         BufferedReader inputStream = null;
         PrintWriter outputStream = null;
 
         try {
             inputStream = new BufferedReader(new FileReader(sourceFile));
-            outputStream = new PrintWriter(new FileWriter(destinationFile));
+            outputStream = new PrintWriter(new FileWriter(target));
 
             String line;
 

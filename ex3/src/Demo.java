@@ -7,7 +7,7 @@ public class Demo {
 
     public static void main(String[] args) {
         Content content = new Content("file");
-        File newFile = new File("newFile");
-        content.writeReversed(newFile);
+        File target = new File("ReversedFile");
+        content.writeReversed(target);
     }
 }
