@@ -5,13 +5,17 @@ import java.io.*;
  * Created by clouway on 20.05.16.
  */
 public class Content {
+        private String sourceFile;
+
+    public Content(String sourceFile){
+        this.sourceFile = sourceFile;
+    }
 
     /**
      * Transfer reversed lines from file to file.
-     * @param sourceFile is the file from the reading is.
      * @param destinationFile is the file where writing is.
      */
-    public void reversedTransfer(String sourceFile, String destinationFile) {
+    public void writeReversed(File destinationFile) {
 
         BufferedReader inputStream = null;
         PrintWriter outputStream = null;
