@@ -5,7 +5,7 @@
 public class Demo {
 
     public static void main(String[] args) {
-        TransferredContent content = new TransferredContent();
+        Content content = new Content();
         content.reversedTransfer("file", "newFile");
     }
 }

@@ -4,7 +4,7 @@ import java.io.*;
 /**
  * Created by clouway on 20.05.16.
  */
-public class TransferredContent {
+public class Content {
 
     /**
      * Transfer reversed lines from file to file.
