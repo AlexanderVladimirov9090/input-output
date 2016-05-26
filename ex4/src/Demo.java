@@ -9,7 +9,7 @@ public class Demo {
             FileInputStream source = new FileInputStream("file");
             FileOutputStream destination = new FileOutputStream("Destination");
             TransferObject transferObject = new TransferObject(source);
-            transferObject.transferFragmentTo(destination, new byte[1024], 10 ,99);
+            transferObject.transferFragmentTo(destination, new byte[1024], 10 ,3);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
