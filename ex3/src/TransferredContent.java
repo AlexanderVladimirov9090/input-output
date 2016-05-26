@@ -4,14 +4,14 @@ import java.io.*;
 /**
  * Created by clouway on 20.05.16.
  */
-public class ReversedFile {
+public class TransferredContent {
 
     /**
      * Transfer reversed lines from file to file.
      * @param sourceFile is the file from the reading is.
      * @param destinationFile is the file where writing is.
      */
-    public void reversedContent(String sourceFile, String destinationFile) {
+    public void reversedTransfer(String sourceFile, String destinationFile) {
 
         BufferedReader inputStream = null;
         PrintWriter outputStream = null;
