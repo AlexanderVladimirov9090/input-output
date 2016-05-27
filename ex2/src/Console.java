@@ -4,6 +4,7 @@ import java.util.Scanner;
  * Created by clouway on 19.05.16.
  */
 public class Console {
+
     /**
      * Reads input from keyboard.
      * @param endFileSymbol the symbol that is used to end input session.

@@ -12,8 +12,6 @@ public class Writer {
 
     /**
      * Writes content in the text file
-     * @param content content that is written.
-     * @param file
      */
     public void write(String content, TextFile file){
 
