@@ -11,19 +11,21 @@ import static java.nio.file.Files.isDirectory;
  */
 public class DirectoryBrowser {
 
-  public void listContent(String source) {
-    Path filePat= Paths.get(source);
+  public String listContent(String source) {
+    Path filePat = Paths.get(source);
+    String isFile="Is file:\n";
     if (isDirectory(filePat)) {
-      System.out.println(filePat.getFileName()+" = Directory.");
-      try (DirectoryStream<Path> stream = Files.newDirectoryStream(filePat)){
+       try (DirectoryStream<Path> stream = Files.newDirectoryStream(filePat)) {
+      String contentOfDri="Is Directory:";
         for (Path file : stream) {
-          System.out.println(file.getFileName());
+          contentOfDri += file.getFileName();
+          contentOfDri +="\n";
         }
+         return contentOfDri;
       } catch (IOException e) {
         e.printStackTrace();
       }
-    } else {
-      System.out.println(filePat.getFileName()+" = File.");
     }
+    return isFile + String.valueOf(filePat.getFileName());
   }
 }
