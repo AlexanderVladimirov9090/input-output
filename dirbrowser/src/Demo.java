@@ -6,6 +6,7 @@ public class Demo {
     DirectoryBrowser browser = new DirectoryBrowser();
 
     System.out.println(browser.listContent("/home/clouway/developmnet/path/WorkingPath"));
+
     System.out.println(browser.listContent("/home/clouway/developmnet/path/WorkingPath/file.txt"));
 
     }
