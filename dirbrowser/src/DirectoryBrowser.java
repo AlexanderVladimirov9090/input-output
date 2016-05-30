@@ -11,6 +11,11 @@ import static java.nio.file.Files.isDirectory;
  */
 public class DirectoryBrowser {
 
+  /**
+   * Returns string of file name if dir returns content of dir.
+   * @param source file path.
+   * @return string of file name.
+   */
   public String listContent(String source) {
     Path filePat = Paths.get(source);
     String isFile="Is file:\n";
