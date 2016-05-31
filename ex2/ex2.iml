@@ -9,10 +9,20 @@
     <orderEntry type="sourceFolder" forTests="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <orderEntry type="library" name="com.squareup.okio:okio:1.8.0" level="application" />
 >>>>>>> e3da086... Done with Input content from console and output it in file.
 =======
 >>>>>>> fd96ba6... Renamed class CreatedFile to TextFile and ranem read() to content().
+=======
+    <orderEntry type="library" name="com.squareup.okio:okio:1.8.0" level="application" />
+>>>>>>> e3da086... Done with Input content from console and output it in file.
+=======
+>>>>>>> fd96ba6... Renamed class CreatedFile to TextFile and ranem read() to content().
+=======
+>>>>>>> 44e838d... Done.
   </component>
 </module>

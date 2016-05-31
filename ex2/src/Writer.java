@@ -11,14 +11,15 @@ import java.io.IOException;
 public class Writer {
 
     /**
+     /**
      * Writes content in the text file
      */
     public void write(String content, TextFile file){
 
-        try (FileWriter writer = new FileWriter(file.fileName())) {
-            writer.write(content);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+      try (FileWriter writer = new FileWriter(file.fileName())) {
+        writer.write(content);
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
     }
 }
